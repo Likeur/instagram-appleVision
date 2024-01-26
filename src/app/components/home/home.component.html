@@ -8,7 +8,7 @@
                     <span class="text-xl ml-10 absolute mt-0.5 opacity-0 group-hover:opacity-100 duration-300">Home</span>
                 </button>
                 <button class="h-8 w-8 grid place-content-center relative rounded-md duration-300 hover:bg-white/20 hover:border-white/10">
-                    <i class='bx bx-search text-xl'></i>
+                    <i class='bx bx-search text-xl '></i>
                     <span class="text-xl ml-10 absolute mt-0.5 opacity-0 group-hover:opacity-100 duration-300">Search</span>
                 </button>
                 <button class="h-8 w-8 grid place-content-center relative rounded-md duration-300 hover:bg-white/20 hover:border-white/10">
@@ -22,13 +22,94 @@
                 
                 <button class="h-8 w-8 rounded-full ring-2 ring-white/80 overflow-hidden"><img src="../../../assets/img/likepp.jpg" class="" alt=""></button>
             </div>
-            <div class="text-white/80 h-[80vh] border border-white/10 w-[20vw] bg-white/5 backdrop-blur-md rounded-xl">
+            <div class="text-white/80 h-[90vh] border border-white/10 w-[20vw] bg-white/5 backdrop-blur-md rounded-xl">
                 <h1 class="">Profil</h1>
             </div>
-            <div class="text-white/80 h-[80vh] border border-white/10 w-[35vw] bg-white/5 backdrop-blur-md rounded-xl">
+            <div class="text-white/80 h-[90vh] overflow-hidden border border-white/10 w-[35vw] bg-white/5 backdrop-blur-md rounded-xl">
                 <h1 class="">instagram</h1>
+                <div id="storiesBox" class="p-2 flex items-center gap-4">
+                    <div class="flex flex-col items-center shrink-0 w-20 h-20">
+                        <button class="h-14 w-14 shrink-0 rounded-full ring-2 ring-orange-700/80 overflow-hidden"><img src="../../../assets/img/likepp.jpg" class="w-full h-full object-cover" alt=""></button>
+                        <span class="mt-1 text-white">Votre story</span>
+                    </div>
+                    <div class="flex flex-col items-center shrink-0 w-20 h-20">
+                        <button class="h-14 w-14 shrink-0 rounded-full ring-2 ring-orange-700/80 overflow-hidden"><img src="../../../assets/img/likepp.jpg" class="w-full h-full object-cover" alt=""></button>
+                        <span class="mt-1 text-white shrink-0">Kevin vk</span>
+                    </div>
+                    <div class="flex flex-col items-center shrink-0 w-20 h-20">
+                        <button class="h-14 w-14 shrink-0 rounded-full ring-2 ring-orange-700/80 overflow-hidden"><img src="../../../assets/img/likepp.jpg" class="w-full h-full object-cover" alt=""></button>
+                        <span class="mt-1 text-white shrink-0">Glodie Lk</span>
+                    </div>
+                    <div class="flex flex-col items-center shrink-0 w-20 h-20">
+                        <button class="h-14 w-14 shrink-0 rounded-full ring-2 ring-orange-700/80 overflow-hidden"><img src="../../../assets/img/likepp.jpg" class="w-full h-full object-cover" alt=""></button>
+                        <span class="mt-1 text-white shrink-0">Mukeba</span>
+                    </div>
+                    <div class="flex flex-col items-center shrink-0 w-20 h-20">
+                        <button class="h-14 w-14 shrink-0 rounded-full ring-2 ring-orange-700/80 overflow-hidden"><img src="../../../assets/img/likepp.jpg" class="w-full h-full object-cover" alt=""></button>
+                        <span class="mt-1 text-white shrink-0">Elvin kg</span>
+                    </div>
+                   
+                </div>
+
+                <div class="postBoxes">
+                    <div class="text-white flex items-center justify-between p-4">
+                        <div class="flex items-center gap-3">
+                            <button class="h-6 w-6 rounded-full ring-2 ring-white/80 overflow-hidden"><img src="../../../assets/img/likepp.jpg" class="" alt=""></button>
+                            <span>likeur_off</span>
+                        </div>
+                        <button class="text-2xl">...</button>
+                    </div>
+                    <div class="h-52 w-full">
+                        <img src="../../../assets/img/fond1.jpg" class="w-full h-full object-cover" alt="">
+                    </div>
+                    <div>
+                        <div class="text-white p-4">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <button class="text-2xl duration-300 active:scale-75" (click)="likeClicked()">
+                                        @if (isLikeClicked) {
+                                            <i class='bx bxs-heart text-red-600'></i>
+                                        }@else {
+                                            <i class='bx bx-heart '></i>
+                                        }
+                                        
+                                    </button>
+    
+                                    <button>
+                                        <img width="24" height="24" src="../../../assets/img/comment.png" alt="filled-topic"/>
+                                    </button>
+                                    <button class="text-2xl text-white -rotate-[20deg]">
+                                        <i class='bx bx-send'></i>
+                                    </button>
+                                </div>
+                               
+                                <button class="text-2xl duration-300 active:scale-75" (click)="bookmarkClicked()">
+                                    @if (isBookMarkCliked) {
+                                        <i class='bx bxs-bookmark'></i>
+                                    }@else {
+                                        <i class='bx bx-bookmark'></i>
+                                    }
+                                    
+                                    
+                                </button>
+                            </div>
+                            <div class="mt-1">
+                                <span class="font-semibold">1.232 Likes</span>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-semibold">likeur_off</span>
+                                    <p>One Day a Scientist say better 1% per day ...<span class="text-gray-300">more</span></p>
+                                </div>
+                                <span class="text-gray-300">View 123 comments</span>
+                                <div class="flex items-center gap-2 mt-2">
+                                    <button class="h-4 w-4 rounded-full ring-2 ring-white/80 overflow-hidden"><img src="../../../assets/img/likepp.jpg" class="" alt=""></button>
+                                    <span class="text-gray-300">add a comment</span>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+                </div>
             </div>
-            <div class="text-white h-[80vh] border border-white/10 w-[20vw] bg-white/5 backdrop-blur-md rounded-xl">
+            <div class="text-white h-[90vh] border border-white/10 w-[20vw] bg-white/5 backdrop-blur-md rounded-xl">
                 <h1 class="">Message</h1>
             </div>
         </div>

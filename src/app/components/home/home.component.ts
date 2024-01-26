@@ -9,4 +9,14 @@ import { Component } from '@angular/core';
 export default class HomeComponent {
 
   imgLink = '../../../assets/img/fond2.jpg'
+
+  isLikeClicked = false
+  isBookMarkCliked = false
+
+  likeClicked(){
+    this.isLikeClicked = !this.isLikeClicked
+  }
+  bookmarkClicked(){
+    this.isBookMarkCliked = !this.isBookMarkCliked
+  }
 }
