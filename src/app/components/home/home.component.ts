@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { ProfilComponent } from '../profil/profil.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [ProfilComponent],
   templateUrl: './home.component.html',
 })
 export default class HomeComponent {
