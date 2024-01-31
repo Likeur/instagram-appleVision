@@ -1,31 +1,63 @@
-<main>
-    <div class="p-2 flex items-center justify-between">
-        <span class="text-xl font-semibold">Profile</span>
-        <div class="flex items-center gap-1">
-            <button class="h-7 w-7 bg-white/30 rounded-full grid place-content-center"><img src="../../../assets/img/send.png" class="w-4" alt=""></button>
-            <button class="h-7 w-7 bg-white/30 rounded-full grid place-content-center"><i class='bx bx-dots-horizontal-rounded'></i></button>
-            <button class="h-7 w-7 bg-white/30 rounded-full grid place-content-center"><i class='bx bx-arrow-from-left'></i></button>
+<main class="flex flex-col h-full justify-between">
+    <div>
+        <div class="p-2 flex items-center justify-between">
+            <span class="text-xl font-semibold">Profile</span>
+            <div class="flex items-center gap-1">
+                <button class="h-7 w-7 bg-white/30 rounded-full grid place-content-center"><img src="../../../assets/img/send.png" class="w-4" alt=""></button>
+                <button class="h-7 w-7 bg-white/30 rounded-full grid place-content-center"><i class='bx bx-dots-horizontal-rounded'></i></button>
+                <button class="h-7 w-7 bg-white/30 rounded-full grid place-content-center"><i class='bx bx-arrow-from-left'></i></button>
+            </div>
+        </div>
+        <div class="mt-1 flex justify-center">
+            <div class="flex flex-col items-center shrink-0">
+                <button class="h-16 w-16 shrink-0 rounded-full overflow-hidden"><img src="../../../assets/img/likepp.jpg" class="w-full h-full object-cover" alt=""></button>
+                <span class="mt-2 text-white text-xl">Likeur off</span>
+                <span class="mt-0.5 text-gray-300">likeur_off</span>
+            </div>
+        </div>
+        <div class="flex items-center gap-3 justify-center mt-2" >
+            <div>
+                <span class="text-xl font-semibold">3</span>
+                <p class="text-gray-300">post</p>
+            </div>
+            <div>
+                <span class="text-xl font-semibold">17,2k</span>
+                <p class="text-gray-300">followers</p>
+            </div>
+            <div>
+                <span class="text-xl font-semibold">203</span>
+                <p class="text-gray-300">follow</p>
+            </div>
+        </div>
+        <div class="flex justify-center mt-2 border-t border-white/5 w-full">
+            <div class="w-full">
+                <div class="grid grid-cols-3 w-full h-[10vh]">
+                    <div (click)="openPost()" class="h-full hover:cursor-pointer w-full">
+                        <img src="../../../assets/img/fond2.jpg" class="h-full w-full object-cover" alt="">
+                    </div>
+                    <div class="h-full w-full hover:cursor-pointer">
+                        <img src="../../../assets/img/fond1.jpg" class="h-full w-full object-cover" alt="">
+                    </div>
+                    <div class="h-full w-full hover:cursor-pointer">
+                        <img src="../../../assets/img/fond3.jpg" class="h-full w-full object-cover" alt="">
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 w-full h-[10vh]">
+                    <div class="h-full w-full hover:cursor-pointer">
+                        <img src="../../../assets/img/fond1.jpg" class="h-full w-full object-cover" alt="">
+                    </div>
+                    <div class="h-full w-full hover:cursor-pointer">
+                        <img src="../../../assets/img/fond3.jpg" class="h-full w-full object-cover" alt="">
+                    </div>
+                    <div class="h-full w-full hover:cursor-pointer">
+                        <img src="../../../assets/img/fond2.jpg" class="h-full w-full object-cover" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="mt-1 flex justify-center">
-        <div class="flex flex-col items-center shrink-0">
-            <button class="h-16 w-16 shrink-0 rounded-full overflow-hidden"><img src="../../../assets/img/likepp.jpg" class="w-full h-full object-cover" alt=""></button>
-            <span class="mt-2 text-white text-xl">Likeur off</span>
-            <span class="mt-0.5 text-gray-300">likeur_off</span>
-        </div>
+    <div class="absolute w-full bottom-0">
+        <button class="w-full justify-center p-2 bg-white/15 hover:bg-white/25 hover:cursor-pointer duration-300 backdrop-blur-md">Go to profile</button>
     </div>
-    <div class="flex items-center gap-3 justify-center mt-2" >
-        <div>
-            <span class="text-xl font-semibold">3</span>
-            <p class="text-gray-300">post</p>
-        </div>
-        <div>
-            <span class="text-xl font-semibold">17,2k</span>
-            <p class="text-gray-300">followers</p>
-        </div>
-        <div>
-            <span class="text-xl font-semibold">203</span>
-            <p class="text-gray-300">follow</p>
-        </div>
-    </div>
+    
 </main>
