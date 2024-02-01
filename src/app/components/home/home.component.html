@@ -20,13 +20,13 @@
                     <span class="text-xl ml-10 absolute mt-0.5 opacity-0 group-hover:opacity-100 duration-300">Reels</span>
                 </button>
                 
-                <button class="h-8 w-8 rounded-full ring-2 ring-white/80 overflow-hidden"><img src="../../../assets/img/likepp.jpg" class="" alt=""></button>
+                <button (click)="openProfileBox()" class="h-8 w-8 rounded-full duration-300 active:scale-75 ring-2 ring-white/80 overflow-hidden"><img src="../../../assets/img/likepp.jpg" class="" alt=""></button>
             </div>
             <!-- Profil Boxe -->
             <div id="profilBox" class="text-white/80 h-[90vh] overflow-hidden border border-white/10 w-[20vw] bg-white/5 backdrop-blur-md rounded-xl">
                 <div class="p-2 border-b border-white/5 flex items-center justify-between">
-                    <img src="../../../assets/img/instagramlogo.png" class="w-36" alt="">
-                    <button class="h-5 w-5 rounded-full bg-white/20 "><i class='bx bx-x'></i></button>
+                    <img src="../../../assets/img/instagramlogo.png" class="w-24" alt="">
+                    <button (click)="closeProfileBox()" class="h-5 w-5 active:scale-75 duration-300 rounded-full bg-white/20 "><i class='bx bx-x'></i></button>
                 </div>
                 <div>
                     <app-profil/>
@@ -35,6 +35,13 @@
 
             <!-- Post Boxe -->
             <div id="postBoxe" class="text-white/80 h-[90vh] overflow-hidden border border-white/10 w-[35vw] bg-white/5 backdrop-blur-md rounded-xl">
+                <div class="p-2 border-b border-white/5 flex items-center justify-between">
+                    <img src="../../../assets/img/instagramlogo.png" class="w-24" alt="">
+                    <div class="flex items-center bg-white/20 rounded-full gap-2 px-2">
+                        <i class='bx bx-search'></i>
+                        <input type="search" class="bg-transparent text-white outline-none placeholder:text-white/60" placeholder="search on instagram" name="" id="">
+                    </div>
+                </div>
                 <div id="storiesBox" class="p-2 flex items-center gap-4">
                     <div class="flex flex-col items-center shrink-0 w-20 h-20">
                         <button class="h-14 w-14 shrink-0 rounded-full ring-2 relative"><img src="../../../assets/img/likepp.jpg" class="w-full rounded-full h-full object-cover" alt="">
@@ -108,7 +115,16 @@
                         </div>
                         <button class="text-2xl"><i class='bx bx-dots-horizontal-rounded'></i></button>
                     </div>
-                    <div class="h-52 w-full">
+                    <div class="h-52 w-full relative">
+                        <div class="absolute likeRed scale-0 top-[40%] left-[40%] text-6xl">
+                            <i class='bx bxs-heart text-red-600'></i>
+                        </div>
+                        <div class="absolute likeRed scale-0 top-[20%] left-[20%] text-3xl">
+                            <i class='bx bxs-heart text-red-600'></i>
+                        </div>
+                        <div class="absolute likeRed scale-0 top-[70%] right-[20%] text-4xl">
+                            <i class='bx bxs-heart text-red-600'></i>
+                        </div>
                         <img src="../../../assets/img/fond1.jpg" class="w-full h-full object-cover" alt="">
                     </div>
                     <div>
@@ -143,7 +159,7 @@
                                 </button>
                             </div>
                             <div class="mt-1">
-                                <span class="font-semibold">1.232 Likes</span>
+                                <span class="font-semibold"> {{numberOfLike }} Likes</span>
                                 <div class="flex items-center gap-2">
                                     <span class="font-semibold">likeur_off</span>
                                     <p>One Day a Scientist say better 1% per day ...<span class="text-gray-300">more</span></p>
