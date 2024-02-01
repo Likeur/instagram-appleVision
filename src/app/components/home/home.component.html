@@ -177,7 +177,17 @@
 
             <!-- Message List -->
             <div id="MessageList" class="text-white h-[90vh] border border-white/10 w-[20vw] bg-white/5 backdrop-blur-md rounded-xl">
-                <h1 class="">Message</h1>
+                <div class="p-2 border-b border-white/10 flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <h1 class="">Message</h1>
+                        <span class="bg-red-700 text-white rounded-full p-2 h-4 w-4 grid place-content-center">4</span>
+                    </div>
+                    <button class="h-7 w-7 bg-white/30 rounded-full grid place-content-center"><i class='bx bx-dots-horizontal-rounded'></i></button>
+                </div>
+
+                <div>
+                    <app-message-list/>
+                </div>
             </div>
         </div>
     </div>

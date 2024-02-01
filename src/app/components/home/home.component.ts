@@ -3,12 +3,13 @@ import { ProfilComponent } from '../profil/profil.component';
 import { Draggable } from "gsap/Draggable";
 import gsap from 'gsap';
 import { isFormGroup } from '@angular/forms';
+import { MessageListComponent } from '../message-list/message-list.component';
 
 gsap.registerPlugin(Draggable)
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ProfilComponent],
+  imports: [ProfilComponent, MessageListComponent],
   templateUrl: './home.component.html',
 })
 export default class HomeComponent implements OnInit {
