@@ -13,7 +13,7 @@
                     </div>
                 </div>
                 <div>
-                    <button (click)="closemessageBox()" class="h-5 w-5 active:scale-75 text-white duration-300 rounded-full bg-white/20 "><i class='bx bx-x'></i></button>
+                    <button  title="closemessage" (click)="closemessageBox()" class="h-7 w-7 active:scale-75 text-white duration-300 rounded-full bg-white/20 "><i class='bx bx-x text-2xl'></i></button>
                 </div>
             </div>
         </div>
@@ -59,8 +59,7 @@
         </div>
     </div>
     <div class="bg-white/20 text-white/80 rounded-full gap-2 px-2 w-full p-1 flex justify-between  items-center">
-        <div><i class='bx bx-send'></i></div>
         <input type="text" class="bg-white/30 rounded-full w-full placeholder:text-white/70 outline-none p-2" placeholder="write a message">
-        <div><i class='bx bx-send'></i></div>
+        <button title="sendbutton"><i class='bx bx-send'></i></button>
     </div>
 </section>

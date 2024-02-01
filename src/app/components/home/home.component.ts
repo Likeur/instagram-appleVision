@@ -33,6 +33,14 @@ export default class HomeComponent implements OnInit {
     gsap.set('#viewpostBoxewrapper',{
       display:'none'
     })
+
+    gsap.set('#viewmessageBoxe',{
+      scale:0
+    })
+
+    gsap.set('#viewmessageBoxewrapper',{
+      display:'none'
+    })
   }
   likeClicked(){
     this.isLikeClicked = !this.isLikeClicked
@@ -104,6 +112,31 @@ export default class HomeComponent implements OnInit {
   }
 
   closemessageList(){
-    
+    gsap.to('#MessageList',{
+      x:-60,
+      opacity:0,
+      display:'none'
+    })
+  }
+  openmessageList(){
+    gsap.to('#MessageList',{
+      x:0,
+      opacity:1,
+      display:'block'
+    })
+  }
+
+  isExpand = false
+
+  onExpand(){
+    this.isExpand = !this.isExpand
+
+    if(this.isExpand){
+      this.closeProfileBox()
+      this.closemessageList()
+    }else if(!this.isExpand){
+      this.openProfileBox()
+      this.openmessageList()
+    }
   }
 }
