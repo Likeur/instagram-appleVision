@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { ProfilComponent } from '../profil/profil.component';
 import { Draggable } from "gsap/Draggable";
 import gsap from 'gsap';
-import { isFormGroup } from '@angular/forms';
 import { MessageListComponent } from '../message-list/message-list.component';
+import { MessageViewComponent } from '../message-view/message-view.component';
 
 gsap.registerPlugin(Draggable)
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ProfilComponent, MessageListComponent],
+  imports: [ProfilComponent, MessageListComponent, MessageViewComponent],
   templateUrl: './home.component.html',
 })
 export default class HomeComponent implements OnInit {
@@ -86,6 +86,7 @@ export default class HomeComponent implements OnInit {
     }, "<")
   }
 
+
   closeProfileBox(){
     gsap.to('#profilBox',{
       x:60,
@@ -102,7 +103,7 @@ export default class HomeComponent implements OnInit {
     })
   }
 
-  onLike(){
+  closemessageList(){
     
   }
 }

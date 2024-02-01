@@ -19,9 +19,9 @@ export class MessageListComponent {
   openMessageview(){
     this.openPosttl.to('#main_box',{
       scale:0.5,
-    }).to('#viewpostBoxewrapper',{
+    }).to('#viewmessageBoxewrapper',{
       display:'grid'
-    }, "<").to('#viewpostBoxe',{
+    }, "<").to('#viewmessageBoxe',{
       scale:1
     }, "<")
   }
