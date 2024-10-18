@@ -1,27 +1,14 @@
 # InstagramAppleVision
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+this is a screenshot of the project
+
+![insta clone](https://github.com/user-attachments/assets/ea33b050-b08f-47aa-82fc-22067fde0751)
+
+this is a clone of instagram designed to be displayed on an applevision. this is just the frontend side
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- clone this repo with `git clone`
+- navigate to the project folder and run `npm i` to install all the dependances
+- run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
